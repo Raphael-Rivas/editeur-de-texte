@@ -45,6 +45,10 @@ public class Document {
         texte = partieGauche + ajout + partieDroite;
     }
 
+    public void minuscules(int debut, int fin) {
+        remplacer(debut, fin, texte.substring(debut, fin+1).toLowerCase());
+    }
+
     public void clear() {
         texte = "";
     }

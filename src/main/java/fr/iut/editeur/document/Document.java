@@ -39,6 +39,12 @@ public class Document {
         remplacer(debut, fin, "");
     }
 
+    public void inserer(int debut, String ajout) {
+        String partieGauche = texte.substring(0, debut);
+        String partieDroite = texte.substring(debut);
+        texte = partieGauche + ajout + partieDroite;
+    }
+
     public void clear() {
         texte = "";
     }

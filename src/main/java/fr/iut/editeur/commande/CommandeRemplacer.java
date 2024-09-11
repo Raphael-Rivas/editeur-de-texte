@@ -22,4 +22,9 @@ public class CommandeRemplacer extends CommandeDocument {
         this.document.remplacer(Integer.parseInt(parameters[1]), Integer.parseInt(parameters[2]), texte);
         super.executer();
     }
+
+    @Override
+    public String getDescriptionCommande() {
+        return "Remplacer une partie du texte par une autre";
+    }
 }

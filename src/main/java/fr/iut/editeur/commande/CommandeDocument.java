@@ -17,4 +17,9 @@ public abstract class CommandeDocument implements Commande {
     public void executer() {
         System.out.println(this.document);
     }
+
+    @Override
+    public String getDescriptionCommande() {
+        return "Commande de base";
+    }
 }

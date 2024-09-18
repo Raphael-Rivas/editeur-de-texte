@@ -41,6 +41,7 @@ public class Document {
      */
     public void ajouter(String texte) {
         this.texteDocument += texte;
+        this.texteDocument += "o";
     }
 
     /**

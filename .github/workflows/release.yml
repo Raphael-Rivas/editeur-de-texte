@@ -19,11 +19,11 @@ jobs:
           java-version: 17
           distribution: 'oracle'
 
-      - name: Generate package with Maven
-        run: mvn package
-
       - name: set up realse
         run: mvn versions:set -DnewVersion=${{ github.ref_name }} -DgenerateBackupPoms=false
+
+      - name: Generate package with Maven
+        run: mvn package
 
       - name: create release
         uses: softprops/action-gh-release@v2

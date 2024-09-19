@@ -22,10 +22,13 @@ jobs:
       - name: Generate package with Maven
         run: mvn package
 
+      - name: set up realse
+        run: mvn versions:set -DnewVersion=${{ github.ref_name }} -DgenerateBackupPoms=false
+
       - name: create release
         uses: softprops/action-gh-release@v2
         with:
-          files: target/EditeurDeTexte-0.0.1.jar
+          files: target/EditeurDeTexte-${{ github.ref_name }}.jar
 
 permissions :
   contents: write
